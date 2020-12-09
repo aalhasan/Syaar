@@ -1,0 +1,4 @@
+enum CarCapacity{
+  Single,
+  Group
+}

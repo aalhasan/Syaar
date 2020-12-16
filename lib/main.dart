@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import 'entities/Trips.dart';
+import 'entities/Trip.dart';
 
 
 
@@ -60,14 +61,10 @@ class SayearPage extends StatelessWidget {
           body: TabBarView(
             children: [
               _tabViewer('طلباتي الحاليه', trips: this.trips),
-              _tabViewer('طلباتي المستقبليه', trips: this.trips )
+              _tabViewer('طلباتي السابقة', trips: this.trips )
             ],
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            tooltip: 'جب دراهم',
-            child: Icon(Icons.add),
-          ),
+          floatingActionButton: buildFloatingActionButton(),
         ));
   }
 
@@ -83,6 +80,15 @@ class SayearPage extends StatelessWidget {
 
 
 
+    );
+  }
+
+
+  Widget buildFloatingActionButton(){
+    return FloatingActionButton.extended(
+        onPressed: () {},
+        icon: Icon(Icons.add),
+        label:Text('طلب نقل')
     );
   }
 

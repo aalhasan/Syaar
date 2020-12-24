@@ -9,7 +9,8 @@ import 'enums/CarCapacity.dart';
 import 'enums/Days.dart';
 import 'enums/TripDirection.dart';
 import 'enums/TripScope.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import 'package:uuid/uuid.dart';
 
 
 class Trip {
@@ -22,11 +23,15 @@ class Trip {
   String _narruation;
   TripStatus _tripStatus;
   Customer _customer;
+  String _uuid;
 
+
+  String get uuid => _uuid;
 
   Trip(this._home, this._destination) {
     this._home = _home;
     this._destination = _destination;
+    this._uuid = Uuid().v4();
   }
 
 
@@ -34,15 +39,7 @@ class Trip {
   String toString() => 'from ' + _home.toString() + ' to ' + this._destination.toString();
 
 
-
-
-
-
-
-
   // Getters and setters
-
-
 
 
   TripStatus get tripStatus => _tripStatus;

@@ -3,7 +3,7 @@ import 'package:Syaar/entities/utils/MockupUtilities.dart';
 import 'package:Syaar/widgets//SyaarPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+//import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 
 void main() {

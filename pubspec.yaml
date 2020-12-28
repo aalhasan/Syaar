@@ -25,8 +25,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  google_maps_flutter:
-  location: ^3.0.0
+  #google_maps_flutter: 0.5.29
+  #location: ^3.0.0
   uuid: 2.2.2
 
 

@@ -41,12 +41,9 @@ class Trip {
 
   // Getters and setters
 
-
   TripStatus get tripStatus => _tripStatus;
 
-  set tripStatus(TripStatus value) {
-    _tripStatus = value;
-  }
+  set tripStatus(TripStatus value) => _tripStatus = value;
 
   Location get home => this._home;
 
@@ -54,46 +51,31 @@ class Trip {
 
   String get narruation => _narruation;
 
-  set narruation(String value) {
-    _narruation = value;
-  }
+  set narruation(String value) => _narruation = value;
 
   TripDirection get tripDirection => _tripDirection;
 
-  set tripDirection(TripDirection value) {
-    _tripDirection = value;
-  }
+  set tripDirection(TripDirection value) => _tripDirection = value;
 
   TripScope get tripScope => _tripScope;
 
-  set tripScope(TripScope value) {
-    _tripScope = value;
-  }
+  set tripScope(TripScope value) => _tripScope = value;
 
   CarCapacity get carCapacity => _carCapacity;
 
-  set carCapacity(CarCapacity value) {
-    _carCapacity = value;
-  }
+  set carCapacity(CarCapacity value) => _carCapacity = value;
 
   Days get days => _days;
 
-  set days(Days value) {
-    _days = value;
-  }
+  set days(Days value) => _days = value;
 
   Location get destination => _destination;
 
-  set destination(Location value) {
-    _destination = value;
-  }
+  set destination(Location value) => _destination = value;
 
   Customer get customer => _customer;
 
-  set customer(Customer value) {
-    _customer = value;
-  }
-
+  set customer(Customer value) => _customer = value;
 
 }
 

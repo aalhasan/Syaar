@@ -8,9 +8,9 @@ class Customer{
 
   String get email => _email;
 
-  set email(String value) {
+  set email(String value) =>
     _email = value;
-  }
+
 
   String get mobileNumber => _mobileNumber;
 

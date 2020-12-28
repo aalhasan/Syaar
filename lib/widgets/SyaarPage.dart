@@ -106,22 +106,35 @@ class SyaarPage extends StatelessWidget {
   /**
    * Creates the Footer
    */
- Widget _itemFooter(Trip trip) {
+ Widget _itemHeader(Trip trip) {
 
+    return Row(
+      children:<Widget> [
+        CircleAvatar(
+            backgroundImage: NetworkImage(
+              'https://www.iconsdb.com/icons/preview/black/car-xxl.png',
+            ),
+        ),
+        Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(trip.toString()),
+            )
+        )
+      ],
+    );
  }
 
   /**
    * Creates the header
    */
-  Widget _itemHeader(Trip trip) {
-
+  Widget _itemFooter(Trip trip) {
+      return Container(
+        margin: EdgeInsets.only(top: 8.0),
+        alignment: Alignment.centerRight,
+        child: Chip(label: Text(trip.tripStatus.toString()),)
+      );
 
   }
 
 }
-
-
-/**
- * Creates Header
- */
-

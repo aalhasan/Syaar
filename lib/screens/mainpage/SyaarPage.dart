@@ -56,7 +56,9 @@ class SyaarPage extends StatelessWidget {
 
 //builder
   Widget _tabViewer(String s, {List<Trip> trips, TripStatus status}) {
-    var  t = MockupUtilities.filterTrips(trips, status);
+
+    var  _trips = MockupUtilities.filterTrips(trips, status);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
@@ -65,19 +67,19 @@ class SyaarPage extends StatelessWidget {
           padding: EdgeInsets.only(top: 16.0)),
         Expanded(child: ListView.builder(
         physics: BouncingScrollPhysics(),
-            itemCount: trips.length,
+            itemCount: _trips.length,
             itemBuilder: (BuildContext context, int index){
-              final trip  = trips[index];
+              final _trip  = _trips[index];
               return Card(
-                key: ValueKey(trip.uuid),
+                key: ValueKey(_trip.uuid),
                   margin: EdgeInsets.symmetric(vertical: 10.0,
                       horizontal: 25.0),
                 child: Padding(
                   child: Column(
                     children: <Widget>[
-                      _itemHeader(trip),
-                      Text (trip.customer.toString()),
-                      _itemFooter(trip)
+                      _itemHeader(_trip),
+                      Text (_trip.customer.toString()),
+                      _itemFooter(_trip)
                     ]
                   ),
                   padding: EdgeInsets.all(8.0),
@@ -132,7 +134,7 @@ class SyaarPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(top: 8.0),
         alignment: Alignment.centerRight,
-        child: Chip(label: Text(trip.tripStatus.toString()),)
+        child: Chip(label: Text(trip.tripStatus.toShortString()),)
       );
 
   }

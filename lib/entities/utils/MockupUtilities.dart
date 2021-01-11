@@ -39,9 +39,9 @@ class MockupUtilities {
     if (status == TripStatus.New)
       return trips
           .where((i) =>
-              i.tripStatus == TripStatus.New ||
+              (i.tripStatus == TripStatus.New ||
               i.tripStatus == TripStatus.Processing ||
-              i.tripStatus == TripStatus.Active)
+              i.tripStatus == TripStatus.Active))
           .toList();
     else
       return trips

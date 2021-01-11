@@ -7,3 +7,10 @@ enum Days{
   Fir,
   Sat
 }
+
+//toShortString
+extension ParseToString on Days {
+  String toShortString() {
+    return this.toString().split('.').last;
+  }
+}

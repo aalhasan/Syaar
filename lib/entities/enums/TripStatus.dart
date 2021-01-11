@@ -5,3 +5,11 @@ New,
   Active,
   Archive
 }
+
+//toShortString
+extension ParseToString on TripStatus {
+  String toShortString() {
+    return this.toString().split('.').last;
+  }
+}
+

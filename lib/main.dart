@@ -1,6 +1,7 @@
 import 'package:Syaar/entities/Trip.dart';
 import 'package:Syaar/entities/utils/MockupUtilities.dart';
-import 'package:Syaar/widgets//SyaarPage.dart';
+import 'package:Syaar/screens/mainpage/SyaarPage.dart';
+import 'package:Syaar/screens/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 //import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -24,10 +25,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Sayar',
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        primarySwatch: Colors.blueGrey,
-      ),
+      theme: ThemeAspect.getMyThemeData(),
       home: SyaarPage(
         trips: trips,
       ),

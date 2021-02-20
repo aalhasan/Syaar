@@ -9,4 +9,6 @@ class Labels{
   static final String oldMashaweer = 'مشاويري السابقة';
 
   static final String getMishware = 'طلب مشوار';
+
+  static final String mobileNumber = 'رقم الجوال';
 }

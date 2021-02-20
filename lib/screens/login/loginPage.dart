@@ -1,4 +1,5 @@
 
+import 'package:Syaar/entities/utils/Labels.dart';
 import 'package:flutter/material.dart';
 
 class loginPage extends StatelessWidget{
@@ -8,7 +9,18 @@ class loginPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-
+    return Scaffold(
+      body: Center(
+        child: (
+        TextField(
+          obscureText: false,
+          decoration: InputDecoration(
+            hintText: Labels.mobileNumber
+          ),
+        )
+        ),
+      )
+    );
 
   }
 
